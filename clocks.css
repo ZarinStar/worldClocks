@@ -1,0 +1,231 @@
+
+/**Font inside clock**/
+  h1
+  {
+    font-size: 20px;
+    text-align: center;
+  }
+
+/*Map portion*/  
+
+#map 
+  { 
+    display: block;
+    /*display:inline-block;*/
+    margin: 0 auto;
+    /*background-image: url("/Images/hawaii.jpg");*/
+    background-size: 100% 100%;
+    font-size: 20px;
+  }
+  #map.BakerIsland /*UTC - 12*/
+  {
+    background-image: url("/Images/maps/bakerisland.png");
+  }
+  #map.Niue /*UTC - 11*/
+  {
+    background-image: url("/Images/maps/niue.png");
+  }
+  #map.Hawaii /*UTC - 10*/
+  {
+    background-image: url("/Images/maps/hawaii.png");
+  }
+  #map.Alaska /*UTC - 9*/
+  {
+    background-image: url("/Images/maps/alaska.png");
+  }
+  #map.Vancouver /*UTC - 8*/
+  {
+    background-image: url("/Images/maps/vancouver.png");
+  }
+  #map.Edmonton /*UTC - 7*/
+  {
+    background-image: url("/Images/maps/edmonton.png");
+  }
+  #map.Mexico /*UTC - 6*/
+  {
+    background-image: url("/Images/maps/mexico.png");
+  }
+  #map.Cuba /*UTC - 5*/
+  {
+    background-image: url("/Images/maps/havana.png");
+  }
+  #map.Chile /*UTC - 4*/
+  {
+    background-image: url("/Images/maps/chile.png");
+  }
+  #map.Argentina /*UTC - 3*/
+  {
+    background-image: url("/Images/maps/argentina.png");
+  }
+  #map.Brazil /*UTC - 2*/
+  {
+    background-image: url("/Images/maps/brazil.png");
+  }
+  #map.Greenland /*UTC - 1*/
+  {
+    background-image: url("/Images/maps/greenland.png");
+  }
+  #map.London /*UTC*/
+  {
+    background-image: url("/Images/maps/london.png");
+  }
+  #map.Lagos /*UTC + 1*/
+  {
+    background-image: url("/Images/maps/lagos.png");
+  }
+  #map.Finland /*UTC + 2*/
+  {
+    background-image: url("/Images/maps/finland.png");
+  }
+  #map.Moscow /*UTC + 3*/
+  {
+    background-image: url("/Images/maps/moscow.png");
+  }
+  #map.UAE /*UTC + 4*/
+  {
+    background-image: url("/Images/maps/uae.png");
+  }
+  #map.Uzbek /*UTC + 5*/
+  {
+    background-image: url("/Images/maps/uzbek.png");
+  }
+  #map.Bangladesh /*UTC + 6*/
+  {
+    background-image: url("/Images/maps/bangladesh.png");
+  }
+  #map.Bangkok /*UTC + 7*/
+  {
+    background-image: url("/Images/maps/bangkok.png");
+  }
+  #map.Beijing /*UTC + 8*/
+  {
+    background-image: url("/Images/maps/beijing.png");
+  }
+  #map.Tokyo /*UTC + 9*/
+  {
+    background-image: url("/Images/maps/tokyo.png");
+  }
+  #map.Canberra /*UTC + 10*/
+  {
+    background-image: url("/Images/maps/canberra.png");
+  }
+  #map.Vanuatu /*UTC + 11*/
+  {
+    background-image: url("/Images/maps/vanuatu.png");
+  }
+  #map.NewZealand /*UTC + 9*/
+  {
+    background-image: url("/Images/maps/newzealand.png");
+  }
+
+
+/**Clock portion*/  
+  #clock 
+  { 
+    /*display: block;*/
+    display:inline-block;
+    margin: 0 auto;
+    /*background-image: url("/Images/hawaii.jpg");*/
+    background-size: 100% 100%;
+    font-size: 20px;
+  }
+  #clock.BakerIsland /*UTC - 12*/
+  {
+    background-image: url("/Images/clocks/bakerisland.jpg");
+  }
+  #clock.Niue /*UTC - 11*/
+  {
+    background-image: url("/Images/clocks/niue.jpg");
+  }
+  #clock.Hawaii /*UTC - 10*/
+  {
+    background-image: url("/Images/clocks/hawaii.jpg");
+  }
+  #clock.Alaska /*UTC - 9*/
+  {
+    background-image: url("/Images/clocks/alaska.jpg");
+  }
+  #clock.Vancouver /*UTC - 8*/
+  {
+    background-image: url("/Images/clocks/vancouver.jpg");
+  }
+  #clock.Edmonton /*UTC - 7*/
+  {
+    background-image: url("/Images/clocks/edmonton.jpg");
+  }
+  #clock.Mexico /*UTC - 6*/
+  {
+    background-image: url("/Images/clocks/mexico.jpg");
+  }
+  #clock.Cuba /*UTC - 5*/
+  {
+    background-image: url("/Images/clocks/havana.jpg");
+  }
+  #clock.Chile /*UTC - 4*/
+  {
+    background-image: url("/Images/clocks/chile.jpg");
+  }
+  #clock.Argentina /*UTC - 3*/
+  {
+    background-image: url("/Images/clocks/argentina.jpg");
+  }
+  #clock.Brazil /*UTC - 2*/
+  {
+    background-image: url("/Images/clocks/brazil.jpg");
+  }
+  #clock.Greenland /*UTC - 1*/
+  {
+    background-image: url("/Images/clocks/greenland.jpg");
+  }
+  #clock.London /*UTC*/
+  {
+    background-image: url("/Images/clocks/london.jpg");
+  }
+  #clock.Lagos /*UTC + 1*/
+  {
+    background-image: url("/Images/clocks/lagos.jpg");
+  }
+  #clock.Finland /*UTC + 2*/
+  {
+    background-image: url("/Images/clocks/finland.jpg");
+  }
+  #clock.Moscow /*UTC + 3*/
+  {
+    background-image: url("/Images/clocks/moscow.jpg");
+  }
+  #clock.UAE /*UTC + 4*/
+  {
+    background-image: url("/Images/clocks/uae.jpg");
+  }
+  #clock.Uzbek /*UTC + 5*/
+  {
+    background-image: url("/Images/clocks/uzbek.jpg");
+  }
+  #clock.Bangladesh /*UTC + 6*/
+  {
+    background-image: url("/Images/clocks/bangladesh.jpg");
+  }
+  #clock.Bangkok /*UTC + 7*/
+  {
+    background-image: url("/Images/clocks/bangkok.jpg");
+  }
+  #clock.Beijing /*UTC + 8*/
+  {
+    background-image: url("/Images/clocks/beijing.jpg");
+  }
+  #clock.Tokyo /*UTC + 9*/
+  {
+    background-image: url("/Images/clocks/tokyo.jpg");
+  }
+  #clock.Canberra /*UTC + 10*/
+  {
+    background-image: url("/Images/clocks/canberra.jpg");
+  }
+  #clock.Vanuatu /*UTC + 11*/
+  {
+    background-image: url("/Images/clocks/vanuatu.jpg");
+  }
+  #clock.NewZealand /*UTC + 9*/
+  {
+    background-image: url("/Images/clocks/newzealand.jpg");
+  }

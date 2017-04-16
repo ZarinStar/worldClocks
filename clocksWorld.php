@@ -2,294 +2,294 @@
 <!DOCTYPE html>
 <html>
 
+<HEAD> <title>World Clocks</title> 
 
-
-<HEAD> <title>Clocks</title> 
-
-<!-- <meta charset="utf-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!- - <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> - ->
--->
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <script type="text/javascript" src="moment-timezone.js"></script>
+  <!-- Bootstrap core CSS -->
+  <link href="../../bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <script type="text/javascript" src="moment-timezone.js"></script>
-
-    <!-- <link rel="icon" href="../../favicon.ico"> -->
-
-   <!-- Bootstrap core CSS -->
-    <link href="../../bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-
-     <!-- Bootstrap theme -->
-    <link href="../../bootstrap-3.3.7/dist/css/bootstrap-theme.min.css" rel="stylesheet">
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
-
-    <!--
-    <!- - Custom styles for this template - ->
-    <link href="../../bootstrap-3.3.7/docs/examples/theme/theme.css" rel="stylesheet"> -->
+  <!-- Bootstrap theme -->
+  <link href="../../bootstrap-3.3.7/dist/css/bootstrap-theme.min.css" rel="stylesheet">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<style>
- h1
- {
-  font-size: 20px;
-  text-align: center;
- }
- #clock
- {
-  display: block;
-  margin: 0 auto;
-  /*background-image: url("/Images/hawaii.jpg");*/
-  background-size: 100% 100%;
-  font-size: 20px;
- }
- #clock.hawaii
- {
-  background-image: url("/Images/hawaii.jpg");;
- }
- #clock.moscow
- {
-  background-image: url("/Images/hawaii.jpg");;
- }
- </style>
-
-
 </HEAD>
-
-<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 
 <body>
 
-<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+<link type="text/css" rel="stylesheet" href="../stylesheet.css"/>
+<link type="text/css" rel="stylesheet" href="../Portfolio/clocks.css"/>
 
 <!-- Horizontal bar-->
-<?php include 'header.php'; ?>
+<?php include '../header.php'; ?>
 
 <body id ="mainWall"> <!-- Has wallpaper-->
-<!-- <body id ="gradBeige"> -->
-
- <!-- <div id="mainContainer" align="center"> - ->
-   <section id="content-section"> 
-    
-    <h1> <span class="themefont"> Welcome! </span> </h1>
-<!- - <div class="message" align="left"> - ->
-
-<p> You have reached the website of Dar'ya Heyko! This is for my professional online portfolio where I can showcase my coding skills, my professional work experience in my co-op work terms, and side projects such as published writings. </p>
-
-<p> <b> Please advise that this website is currently under construction. The style is pretty established at this point,
-  but the pages under Co-op are lacking content. I'm currently working on making this mobile friendly so it might look a bit messy at some point. 
-  Thank you for your patience! (Upated on August 16th, 2016) </b> </p>
-
-<!- - <p> <a href="editor.html" target="_self">Editor, click here</a> </p> - ->
-
-  <br>
-    <!- - </div>- ->
-   </section>
-</div> -->
 
 <div class="container theme-showcase" role="main">
       <div class = "message" style="padding:15px;">  
-        <h1> <span class="themefont"> Time Zone Clocks (work in progress) </span> </h1>
+        <h1> <span class="themefont"> World Clocks </span> </h1>
         <br>
 
-        <!--HAWAII TIME- ->
-        <canvas id="canvasHAST" width="210" height="210" style="background-color:#333"></canvas> 
-        <!- -TORONTO TIME-->
-        <canvas id="clock" class="hawaii" width="400" height="200"></canvas>
+        <center><select id = "timezones" style="width: 300px" onchange="changeImage()">
+          <option value="BakerIsland"> Baker Island (UTC-12) </option>
+          <option value="Niue">Alofi, Niue (UTC-11)</option>
+          <option value="Hawaii"> Honolulu, Hawaii (UTC-10)</option>
+          <option value="Alaska">Juneau, Alaska (UTC-9)</option>
+          <option value="Vancouver">Vancouver, B.C. (UTC-8)</option>
+          <option value="Edmonton">Edmonton, Alberta (UTC-7)</option>
+          <option value="Mexico">Mexico City, Mexico (UTC-6)</option>
+          <option value="Cuba">Havana, Cuba (UTC-5) </option>
+          <option value="Chile">Santiago, Chile (UTC-4) </option>
+          <option value="Argentina">Buenos Aires, Argentina (UTC-3)</option>
+          <option value="Brazil">Fernando de Noronha, Brazil (UTC-2)</option>
+          <option value="Greenland">Ittoqqortoormiit, Greenland (UTC-1)</option>
+          <option value="London" selected="selected">London (UTC)</option>
+          <option value="Lagos">Lagos, Nigeria (UTC+1)</option>
+          <option value="Finland">Helsinki, Finland (UTC+2) </option>
+          <option value="Moscow">Moscow, Russia (UTC+3)</option>
+          <option value="UAE">Abu Dhabi, United Arab Emirates (UTC+4)</option>
+          <option value="Uzbek">Tashkent, Uzbekistan (UTC+5)</option>
+          <option value="Bangladesh">Dhaka, Bangladesh (UTC+6)</option>
+          <option value="Bangkok">Bangkok, Thailand (UTC+7)</option>
+          <option value="Beijing">Beijing, China (UTC+8)</option>
+          <option value="Tokyo">Tokyo, Japan (UTC+9) </option>
+          <option value="Canberra">Canberra, Australia (UTC+10)</option>
+          <option value="Vanuatu">Port Vila, Vanuatu (UTC+11)</option>
+          <option value="NewZealand">Auckland, New Zealand (UTC+12)</option>
+        </select></center>
+
         <br>
-        <canvas id="clock" class="moscow" width="400" height="200"></canvas>
-
-        <!-- <canvas id="canvasEST" width="210" height="210" style="background-color:#333"></canvas>
-        <!- -LONDON TIME- ->
-        <canvas id="canvasUTC" width="210" height="210" style="background-color:#333"></canvas>
-        <!- -MOSCOW TIME- ->
-        <canvas id="canvasMSK" width="210" height="210" style="background-color:#333"></canvas>
-        <!- -TOKYO TIME- ->
-        <canvas id="canvasJST" width="210" height="210" style="background-color:#333"></canvas> -->
-
+       <center> <canvas id="clock" class="London" width="400" height="250"></canvas>
+        <br>
+        <br>
+        <canvas id="map" class="London" width="650" height="300"></canvas> </center>
         <br>
 
         <!--Beginning of Javascript -->
         <script>
 
-        //body onLoad="show_clock(), show_clock2(), show_clock3(), show_clock4(), show_clock5()";
-        //var context;
-        //var d;
-        //var str;
-        //var intervalIds = [];
-
         var utcValue = 0; //by default, it's UTC 
+        var clock = document.getElementById("clock");
+        var clock_int = setInterval(getClock, 1000);
 
-        /*Grab all of the canvases*/
-        //var clock = document.getElementById("clock");
-        /*var canvasHAST = document.getElementById("canvasHAST");
-        //canvasHast= document.body.style.backgroundImage = "/Images/hawaii.jpg";
-        var canvasEST = document.getElementById("canvasEST");
-        var canvasUTC = document.getElementById("canvasUTC");
-        var canvasMSK = document.getElementById("canvasMSK");
-        var canvasJST = document.getElementById("canvasJST");*/
-
-        /*context = canvasEST.getContext("2d");
-        //var radius = canvasEST.height / 2;
-        //ctx.translate(radius, radius);
-        //radius = radius * 0.90
-        //var background = new Image();
-        //background.src = '/Images/hawaii.jpg';
-        // Make sure the image is loaded first otherwise nothing will draw.
-        //background.onload = function(){
-        //    ctx.drawImage(background,50,50);   
-        //}​
-        //background.src = "/Images/hawaii.jpg";
-        //radius = canvasEST.height / 2;
-        //ctx.translate(radius, radius);
-        //radius = radius * 0.90
-        //drawClock("EST");
-        setInterval(drawClock, 1000);
-
-        ctxH = canvasHAST.getContext("2d");
-        radius = canvasHAST.height / 2;
-        ctxH.translate(radius, radius);
-        radius = radius * 0.90
-        //radius = canvasEST.height / 2;
-        //ctx.translate(radius, radius);
-        //radius = radius * 0.90
-        //drawClock("HAST");
-        setInterval(drawClock, 1000);
-
-        ctxU = canvasUTC.getContext("2d");
-        radius = canvasUTC.height / 2;
-        ctxU.translate(radius, radius);
-        radius = radius * 0.90
-        //radius = canvasEST.height / 2;
-        //ctx.translate(radius, radius);
-        //radius = radius * 0.90
-        //drawClock("UTC");
-        setInterval(drawClock, 1000);
-
-        ctx = canvasMSK.getContext("2d");
-        radius = canvasMSK.height / 2;
-        ctx.translate(radius, radius);
-        radius = radius * 0.90
-        //drawClock("MSK");
-        setInterval(drawClock, 1000);
-
-        ctx = canvasJST.getContext("2d");
-        radius = canvasJST.height / 2;
-        ctx.translate(radius, radius);
-        radius = radius * 0.90
-        //drawClock("JST");
-        setInterval(drawClock, 1000);*/
-
+        function changeImage(){
+          var choice = document.getElementById("timezones").selectedIndex;
+          switch(choice) {
+            case 0: //-12
+              document.getElementById("clock").className = "BakerIsland";
+              document.getElementById("map").className = "BakerIsland";
+              utcValue = -12;
+              setInterval(getClock, 1000);
+              break;
+            case 1: //-11
+              document.getElementById("clock").className = "Niue";
+              document.getElementById("map").className = "Niue";
+              utcValue = -11;
+              setInterval(getClock, 1000);
+              break;
+            case 2: //-10
+              document.getElementById("clock").className = "Hawaii";
+              document.getElementById("map").className = "Hawaii";
+              utcValue = -10;
+              setInterval(getClock, 1000);
+              break;
+            case 3: //-9
+              document.getElementById("clock").className = "Alaska";
+              document.getElementById("map").className = "Alaska";
+              utcValue = -9;
+              setInterval(getClock, 1000);
+              break;
+            case 4: //-8
+              document.getElementById("clock").className = "Vancouver";
+              document.getElementById("map").className = "Vancouver";
+              utcValue = -8;
+              setInterval(getClock, 1000);
+              break;
+            case 5: //-7
+              document.getElementById("clock").className = "Edmonton";
+              document.getElementById("map").className = "Edmonton";
+              utcValue = -7;
+              setInterval(getClock, 1000); 
+              break;
+            case 6: //-6
+              document.getElementById("clock").className = "Mexico";
+              document.getElementById("map").className = "Mexico";
+              utcValue = -6;
+              setInterval(getClock, 1000); 
+              break;
+            case 7: //-5
+              document.getElementById("clock").className = "Cuba";
+              document.getElementById("map").className = "Cuba";
+              utcValue = -5;
+              setInterval(getClock, 1000); 
+              break;
+            case 8: //-4
+              document.getElementById("clock").className = "Chile";
+              document.getElementById("map").className = "Chile";
+              utcValue = -4;
+              setInterval(getClock, 1000);
+              break;
+            case 9: //-3
+              document.getElementById("clock").className = "Argentina";
+              document.getElementById("map").className = "Argentina";
+              utcValue = -3;
+              setInterval(getClock, 1000);
+              break;
+            case 10: //-2
+              document.getElementById("clock").className = "Brazil";
+              document.getElementById("map").className = "Brazil";
+              utcValue = -2;
+              setInterval(getClock, 1000);
+              break;
+            case 11: //-1
+              document.getElementById("clock").className = "Greenland";
+              document.getElementById("map").className = "Greenland";
+              utcValue = -1;
+              setInterval(getClock, 1000);
+              break;
+            case 12: //UTC
+              document.getElementById("clock").className = "London";
+              document.getElementById("map").className = "London";
+              utcValue = 0;
+              setInterval(getClock, 1000); 
+              break;
+            case 13: //+1
+              document.getElementById("clock").className = "Lagos";
+              document.getElementById("map").className = "Lagos";
+              utcValue = 1;
+              setInterval(getClock, 1000);
+              break;
+            case 14: //+2
+              document.getElementById("clock").className = "Finland";
+              document.getElementById("map").className = "Finland";
+              utcValue = 2;
+              setInterval(getClock, 1000);
+              break;
+            case 15: //+3
+              document.getElementById("clock").className = "Moscow";
+              document.getElementById("map").className = "Moscow";
+              utcValue = 3;
+              setInterval(getClock, 1000);
+              break;
+            case 16: //+4
+              document.getElementById("clock").className = "UAE";
+              document.getElementById("map").className = "UAE";
+              utcValue = 4;
+              setInterval(getClock, 1000);
+              break; 
+            case 17: //+5
+              document.getElementById("clock").className = "Uzbek";
+              document.getElementById("map").className = "Uzbek";
+              utcValue = 5;
+              setInterval(getClock, 1000);
+              break;
+            case 18: //+6
+              document.getElementById("clock").className = "Bangladesh";
+              document.getElementById("map").className = "Bangladesh";
+              utcValue = 6;
+              setInterval(getClock, 1000);
+              break;
+            case 19: //+7
+              document.getElementById("clock").className = "Bangkok";
+              document.getElementById("map").className = "Bangkok";
+              utcValue = 7;
+              setInterval(getClock, 1000);
+              break;
+            case 20: //+8
+              document.getElementById("clock").className = "Beijing";
+              document.getElementById("map").className = "Beijing";
+              utcValue = 8;
+              setInterval(getClock, 1000);
+              break;
+            case 21: //+9
+              document.getElementById("clock").className = "Tokyo";
+              document.getElementById("map").className = "Tokyo";
+              utcValue = 9;
+              setInterval(getClock, 1000);
+              break;
+            case 22: //+10
+              document.getElementById("clock").className = "Canberra";
+              document.getElementById("map").className = "Canberra";
+              utcValue = 10;
+              setInterval(getClock, 1000);
+              break;
+            case 23: //+11
+              document.getElementById("clock").className = "Vanuatu";
+              document.getElementById("map").className = "Vanuatu";
+              utcValue = 11;
+              setInterval(getClock, 1000);
+              break;
+            case 24: //+12
+              document.getElementById("clock").className = "NewZealand";
+              document.getElementById("map").className = "NewZealand";
+              utcValue = 12;
+              setInterval(getClock, 1000);
+              break;
+            default:
+              document.getElementById("clock").className = "London";
+              document.getElementById("map").className = "London";
+              utcValue = 0;
+              setInterval(getClock, 1000); 
+              break;
+          }
+        }
+  
         function getClock()
         {
-         //Get Current Time
           var d = new Date();
-         //var offset = new Date().getTimezoneOffset();
-         //d = d - offset;
-         //var d = new Date();
           d.setTime(d.getTime() + d.getTimezoneOffset() * 60 * 1000 /* convert to UTC */ + (utcValue) * 60 * 60 * 1000);
-          //d.setTime(d.getTime() + d.getTimezoneOffset() * 60 * 1000 /* convert to UTC */ + (/* UTC+8 */ 0) * 60 * 60 * 1000);
-          
-         //d.setUTCHours(d.getUTCHours() - 7);
-         //var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
-         //var nd = new Date(utc + (3600000*(-2)));
-         //console.log("The local time " + nd.toLocaleString());
 
          var str = positionZero(d.getHours(), d.getMinutes(), d.getSeconds());
          //Get the Context 2D or 3D
          
          var context = clock.getContext("2d");
          context.clearRect(0, 0, 500, 200);
-         //context.font = "80px <span id=\"IL_AD7\" class=\"IL_AD\">Arial</span>";
          context.font = "80px Arial";
-         //context.fillStyle = "white";
          context.strokeStyle = "white";
-         //context.fillText(str, 42, 125);
-         context.strokeText(str, 42, 125);
-         //context.font = "12px Arial";
-         //context.fillText("\nHawaii", 42, 125);
+         context.lineWidth = 2;
+         context.strokeText(str, 44, 155); //string, horizontal, vertical
         }
-
-        /*function getClock2()
-        {
-          //Get Current Time
-          var d = new Date();
-          d.setTime(d.getTime() + d.getTimezoneOffset() * 60 * 1000 + (0) * 60 * 60 * 1000);
-          var str = positionZero(d.getHours(), d.getMinutes(), d.getSeconds());
-          //Get the Context 2D or 3D
-
-          d.setTime(d.getTime() + d.getTimezoneOffset() * 60 * 1000+ ( 8) * 60 * 60 * 1000);
-          console.log('UTC+8 Time:', d);
-         
-          var context = clock.getContext("2d");
-          context.clearRect(0, 0, 500, 200);
-          //context.font = "80px <span id=\"IL_AD7\" class=\"IL_AD\">Arial</span>";
-          context.font = "80px Arial";
-          //context.fillStyle = "white";
-          context.strokeStyle = "white";
-          //context.fillText(str, 42, 125);
-          context.strokeText(str, 42, 125);
-          //context.strokeText(london, 42, 125);
-          
-          //context.font = "12px Arial";
-          //context.fillText("\nHawaii", 42, 125);
-        }*/
 
         function positionZero(hour, min, sec)
         {
           var curTime;
           if(hour < 10)
-             curTime = "0"+hour.toString();
+            curTime = "0"+hour.toString();
           else
-             curTime = hour.toString(); 
+            curTime = hour.toString(); 
        
           if(min < 10)
-             curTime += ":0"+min.toString();
+            curTime += ":0"+min.toString();
           else
-             curTime += ":"+min.toString(); 
+            curTime += ":"+min.toString(); 
        
          if(sec < 10)
-             curTime += ":0"+sec.toString();
+            curTime += ":0"+sec.toString();
          else
-             curTime += ":"+sec.toString();
-
-          //curTime += "Hawaii".toString();
-
-             return curTime;
+            curTime += ":"+sec.toString();
+            return curTime;
         }
-
-        //intervalIds.push(setInterval(getClock, 1000));
-
-        var clock = document.getElementById("clock");
-        var clock_int = setInterval(getClock, 1000);
-
-        //var clock2 = document.getElementById("clock2");
-        //var clock2_int = setInterval(getClock2, 1000);
-
-        //var d = new Date();
-        //d.setTime(d.getTime() + d.getTimezoneOffset() * 60 * 1000 /* convert to UTC */ + (/* UTC+8 */ 10) * 60 * 60 * 1000);
-        //document.write(d); //test
- 
 
         </script>
 
         <!--End of Javascript -->
         <br>
         <br>
-        <br>
-
-        <!--<img src ="/Images/hawaii.jpg">-->
-
-        <p> <i> Notes: The clocks were drawn on canvases using Javacsript. 
-          For a link to the algorithm, see here: ____  </i> </p> 
+        <h3> Background</h3> 
+        <p> The clock is displayed on a canvas and the map on another canvas using Javacsript and HTML. It was a simple calculation using seconds and certain functions such as
+          getTimezoneOffset() and setInterval() to make the clock active. I recognize that there are many well-known cities in each time zone, but for some zones,
+          I chose the one that are not as well known as European and North American cities. By default, London is displayed as its time zone is the central one in 
+          the world (UTC). I had a lot of fun playing around with the font of the digital clock, as well as picking the background photos for each time zone.
+          Please note that currently, these time zones for certain cities are in default mode (and not in their summer time zones).
+          For a link to the code for this webpage, see the <a href="https://github.com/ZarinStar/worldClocks" target="_blank"> project on my GitHub account. </a> </i> </p> 
 
         <!-- http://www.uiupdates.com/create-digital-clock-using-html5-canvas-and-javascript/-->
       </div>
